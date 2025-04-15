@@ -68,7 +68,7 @@
             $PDO = NULL;
 
             ?>
-            <strong>Zobacz wszystkie zdjęcia</strong>
+            <strong>Zobacz wszystkie nasze zdjęcia</strong>
         </section>
     <footer>
         <h5>Strone wykonał: Nikodem Warmowski</h5>
