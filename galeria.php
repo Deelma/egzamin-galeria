@@ -10,18 +10,18 @@
     <header>
         <h1>Zdjęcia</h1>
     </header>
+    <section id="lewy">
+        <h2>Tematy zdjęć</h2>
+        <ol>
+            <li>Zwierzęta</li>
+            <li>Krajobrazy</li>
+            <li>Miasta</li>
+            <li>Przyroda</li>
+            <li>Samochody</li>
+        </ol>
+    </section>
     <main>
-        <section id="lewy">
-            <h2>Tematy zdjęć</h2>
-            <ol>
-                <li>Zwierzęta</li>
-                <li>Krajobrazy</li>
-                <li>Miasta</li>
-                <li>Przyroda</li>
-                <li>Samochody</li>
-            </ol>
-        </section>
-        <section id="srodkowy">
+    <section id="srodkowy">
             <?php
 
             $PDO = new PDO('mysql:host=localhost;dbname=galeria;charset=utf8;port=3306', 'root', '');
@@ -42,7 +42,7 @@
 
                 }
 
-                echo '<a href="' . $row['plik'] .'">Pobierz</a>';
+                echo '<a href="' . $row['plik'] .'" download="' . $row['plik'] . '">Pobierz</a>';
 
                 echo '</div>';
 
@@ -50,6 +50,7 @@
 
             ?>
         </section>
+    </main>
         <section id="prawy">
             <h2>Najbardziej lubiane</h2>
             <?php
@@ -69,7 +70,6 @@
             ?>
             <strong>Zobacz wszystkie zdjęcia</strong>
         </section>
-    </main>
     <footer>
         <h5>Strone wykonał: Nikodem Warmowski</h5>
     </footer>

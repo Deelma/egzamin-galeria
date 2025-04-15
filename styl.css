@@ -1,5 +1,5 @@
 *{
-    font-family: Helvetica;
+    font-family: 'Helvetica';
 }
 
 header, footer{
@@ -13,12 +13,18 @@ header, footer{
     background-color: navajowhite;
     width: 15%;
     height: 700px;
+    float: left;
 }
 
 #srodkowy{
     width: 70%;
     height: 700px;
     overflow: scroll;
+    float: left;
+}
+
+footer{
+    clear: both;
 }
 
 img{
@@ -33,7 +39,7 @@ div{
 
 h3, p, a{
     opacity: 0;
-    position: relative;
+    position: absolute;
 }
 
 h3{
@@ -51,22 +57,16 @@ a{
     padding: 15px;
 }
 
-div > img{
-    position: absolute;
-}
-
 div{
+    float: left;
     opacity: 1;
-    transition: 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
-div:hover{
+div:hover img {
     opacity: 0.3;
-    h3, p, a{
-        opacity: 1;
-    }
 }
 
-main{
-    display: flex;
+div:hover h3, div:hover p, div:hover a {
+    opacity: 1;
 }
